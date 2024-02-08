@@ -1,0 +1,117 @@
+/* home.component.scss */
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px; /* Ajusta el margen inferior según sea necesario */
+  }
+  
+  th, td {
+    padding: 8px;
+    text-align: left;
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  th {
+    background-color: #664fc2; /* Color de fondo para las celdas de encabezado */
+    color: white; /* Color del texto en celdas de encabezado */
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .separator td {
+    border-top: 2px solid #000;
+  }
+  
+  strong {
+    font-weight: bold;
+  }
+
+  .habi{
+    width: 600px;
+    margin: auto;
+    padding: 10px;
+  }
+  
+  .contai{
+    width: 100%;
+    background-color: rgb(208, 204, 204);
+    border-radius: 4rem;
+  }
+  
+  .porcen{
+    text-align: right;
+    padding: 10px;
+    color: #dddddd;
+    font-weight: 900;
+  }
+
+  .h2022{
+    background-color: #b41010;
+    animation: h2 4s forwards;
+    border-radius: 4rem;
+  }
+
+  .h2023{
+    background-color: #93b410;
+    animation: h3 4s forwards;
+    border-radius: 4rem;
+  }
+
+  .m2022{
+    background-color: #280da3;
+    animation: m2 4s forwards;
+    border-radius: 4rem;
+  }
+
+  .m2023{
+    background-color: #187499;
+    animation: m3 2s forwards;
+    border-radius: 4rem;
+  }
+
+  :root {
+    --porcentaje-hombres-p: 0%;
+    --porcentaje-hombres-m: 0%;
+    --porcentaje-mujeres-p: 0%;
+    --porcentaje-mujeres-m: 0%;
+  }
+  
+  @keyframes h2 {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: var(--porcentaje-hombres-m);
+    }
+  }
+  
+  @keyframes h3 {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: var(--porcentaje-hombres-p);
+    }
+  }
+  
+  @keyframes m2 {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: var(--porcentaje-mujeres-m);
+    }
+  }
+  
+  @keyframes m3 {
+    0% {
+      width: 0;
+    }
+    100% {
+      width: var(--porcentaje-mujeres-p);
+    }
+  }
+  

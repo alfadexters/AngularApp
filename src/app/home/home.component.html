@@ -1,1 +1,117 @@
-<p>home works!</p>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #ecf0f1; /* Fondo azul claro */
+            font-family: 'Arial', sans-serif; /* Cambiar tipo de letra a Arial o sans-serif */
+        }
+
+        .container {
+            text-align: center;
+        }
+
+        table {
+            width: 70%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+            margin-top: 20px;
+            margin: 0 auto; /* Centrar la tabla horizontalmente */
+        }
+
+        th,
+        td {
+            padding: 6px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        tbody tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        .bar-chart {
+            width: 100%;
+            margin-top: 20px;
+            display: flex;
+            flex-direction: row;
+        }
+
+        .separator td {
+            border-top: 2px solid #000;
+        }
+
+        strong {
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Personas Desaparecidas 2022-2023</h1>
+
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>Data PostgreSQL 2023</th>
+                    <th>Data MySQL 2022</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td><strong>Total Hombres: </strong></td>
+                    <td>{{ contarGenero(dataP, 'hombre') }}</td>
+                    <td>{{ contarGenero(dataM, 'hombre') }}</td>
+                </tr>
+                <tr>
+                    <td><strong>Total Mujeres:</strong></td>
+                    <td>{{ contarGenero(dataP, 'mujer') }}</td>
+                    <td>{{ contarGenero(dataM, 'mujer') }}</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <section class="habi">
+            <h2>Personas desaparecidas en porcentaje 2022-2023</h2>
+
+            <h4>Hombres 2022</h4>
+            <div class="contai">
+                <div class="porcen h2022">{{ porcentajeHombresM.toFixed(2) }}%</div>
+            </div>
+
+            <h4>Hombres 2023</h4>
+            <div class="contai">
+                <div class="porcen h2023">{{ porcentajeHombresP.toFixed(2) }}%</div>
+            </div>
+
+            <h4>Mujeres 2022</h4>
+            <div class="contai">
+                <div class="porcen m2022">{{ porcentajeMujeresM.toFixed(2) }}%</div>
+            </div>
+
+            <h4>Mujeres 2023</h4>
+            <div class="contai">
+                <div class="porcen m2023">{{ porcentajeMujeresP.toFixed(2) }}%</div>
+            </div>
+        </section>
+    </div>
+
+</body>
+
+</html>
